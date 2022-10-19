@@ -24,13 +24,13 @@ void print_times_table(int n)
 			_putchar(',');
 			_putchar(' ');
 
-			res = num * times
+			res = num * times;
 
 			if (res <= 99)
 				_putchar(' ');
 
 			if (res <= 9)
-				_putchar(' ')
+				_putchar(' ');
 
 			if (res >= 100)
 			{
@@ -45,5 +45,5 @@ void print_times_table(int n)
 		}
 		_putchar('\n');
 	}
-	}
+}
 }
