@@ -20,7 +20,7 @@ void print_rev(char *s)
 	j = count -1;
 
 	/* reversing string */
-	for (inex = 0; index < count; index++)
+	for (index = 0; index < count; index++)
 	{
 		rev[index] = s[j];
 		j--;
