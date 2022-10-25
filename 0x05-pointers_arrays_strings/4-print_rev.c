@@ -17,7 +17,7 @@ void print_rev(char *s)
 		count++;
 
 	}
-	j = count -1;
+	j = count - 1;
 
 	/* reversing string */
 	for (index = 0; index < count; index++)
