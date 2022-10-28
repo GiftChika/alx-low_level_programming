@@ -1,19 +1,27 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
+
 /**
- * main - Entry point
- *
- * Return: 0 Always (Success)
- *
- * This program will print out the alphabets using only putchar()
+ * _strncpy - copys a string with n
+ * @dest: copy to
+ * @src: copy from
+ * @n: number of char to be copied
+ * Return: dest
  */
-int main(void)
+char *_strncpy(char *dest, char *src, int n);
 {
-	char alpha = 'a';
+	int j;
 
-	for (alpha = 'a'; alpha <= 'z'; ++alpha)
-		putchar(alpha);
-	putchar('\n');
+	j = 0;
+	while (j < n && src[j] != '\0')
+	{
+		dest[j] = src[j];
+		j++;
+	}
+	while (j < n)
+	{
+		dest[j] = '\0';
+		j++;
+	}
 
-	return (0);
+	return (dest);
 }
