@@ -4,23 +4,27 @@
  *  _strncat - concatenate two strings
  *
  * @n: number of characters in source string
- * @dest: destination string
- * @src: source string
- *
- * Return: new concat string
+ * @dest: copy to
+ * @src: copy from
+ * Return: pointer to dest
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n);
 {
-	int index_1, index_2;
+	int i;
+	int j;
 
-	/* find length of destination string */
-	for (index_2 = 0; src[index_2] != '\0' && index_2 < n; index_2++)
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		dest[index_1 + index_2] = src[index_2]; /* concat strings */
-
+		i++;
 	}
-
-
-	dest[index_1 + index_2] = '\0'; /* add null character to concat strings */
+	j = 0;
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
 	return (dest);
 }
