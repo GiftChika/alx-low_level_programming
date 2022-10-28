@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
- *  _strncat - concatenate two strings
+ *  _strncat - concatenate two strings with n bytes
  *
  * @n: number of characters in source string
  * @dest: copy to
  * @src: copy from
  * Return: pointer to dest
  */
-char *_strncpy(char *dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n)
+
 {
 	int i;
 	int j;
@@ -19,7 +20,7 @@ char *_strncpy(char *dest, char *src, int n);
 		i++;
 	}
 	j = 0;
-	while (src[j] != '\0')
+	while (j < n && src[j] != '\0')
 	{
 		dest[i] = src[j];
 		i++;
