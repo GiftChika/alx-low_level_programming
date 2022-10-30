@@ -16,7 +16,7 @@ void reverse_array(int *a, int n)
 	for (arr = 0; (arr < (n - 1) / 2); arr++)
 	{
 	/* swap and store array elements in temp array */
-		temp_arr = a[arr]
+		temp_arr = a[arr];
 		a[arr] = a[n - 1 - arr];
 		a[n - 1 - arr] = temp_arr;
 	}
