@@ -25,5 +25,5 @@ int _sqrt_recursion(int n)
 {
 	if (n == 0)
 		return (0);
-	return (Temfxn(1, n));
+	return (Tempfxn(1, n));
 }

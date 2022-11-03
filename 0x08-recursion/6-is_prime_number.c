@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * prime_check _ check if number has prime factors (1, n)
+ * prime_check - check if number has prime factors (1, n)
  * @i: iterable value to check n factor against
  * @num: number to check if prime
  *
