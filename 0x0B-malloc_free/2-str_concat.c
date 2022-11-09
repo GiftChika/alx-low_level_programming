@@ -27,7 +27,9 @@ char *str_concat(char *s1, char *s2)
 	{
 		i = 0;
 		while (s2[i++] != '\0')
+			len_s2++;
 	}
+	/* Find concatenated string length */
 	len_cat = len_s1 + len_s2;
 
 	new_str = (char *)malloc(sizeof(char) * (len_cat + 1));
@@ -35,7 +37,11 @@ char *str_concat(char *s1, char *s2)
 	if (new_str == NULL)
 		return (NULL);
 	for (i = 0; i < len_s1; i++)
+		new_str[i] = s1[i];
+
+	for (j = 0; j < len_s2; j++, i++);
 		new_str[i] = s2[j];
+
 	new_str[len_cat] = '\0';
 	return (new_str);
 }
