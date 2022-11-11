@@ -27,14 +27,14 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (mem);
 	}
 	/* create a copy to store address and value of old memory block */
-	ptr_new = ptr
+	ptr_new = ptr;
 
 	mem = malloc(sizeof(*ptr_new) * new_size);
 	if (mem == NULL)
 		free(ptr);
 
 	fill_mem = mem;
-	for (i = 0; i < old_size && i < new_size; i++]
+	for (i = 0; i < old_size && i < new_size; i++)
 		       fill_mem[i] = *ptr_new++;
 
 	free(ptr);
