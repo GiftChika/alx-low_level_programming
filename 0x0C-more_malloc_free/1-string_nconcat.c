@@ -15,7 +15,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *new_str;
 
-	int len_s1
+	int len_s1;
 
 	unsigned int len_s2;
 
@@ -26,9 +26,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
+	/*find length of s1 and s2 */
+	len_s2 = strlen(s2);
+	len_s1 = strlen(s1);
+
 	/*find lenghth of s1 and s2 */
 	if (n >= len_s2)
-		n = len_2;
+		n = len_s2;
 
 	/*add length of bytes of s2 to len of s1 */
 	if (n >= len_s2)
