@@ -32,7 +32,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	mem = malloc(sizeof(*ptr_new) * new_size);
 	if (mem == NULL)
 		free(ptr);
-
+	/* access mem block items */
 	fill_mem = mem;
 	for (i = 0; i < old_size && i < new_size; i++)
 		       fill_mem[i] = *ptr_new++;
